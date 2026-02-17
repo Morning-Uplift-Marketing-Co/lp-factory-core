@@ -6,8 +6,7 @@
   "environment": "production",
   "targets": [
     {
-      "provider": "cloudflare-pages",
-      "projectName": "site-480af37fe3bf4e4a"
+      "provider": "github-actions"
     }
   ],
   "build": {
@@ -23,8 +22,8 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T17:50:55.876Z",
-    "requestId": "488d2aaebf6a",
+    "requestedAt": "2026-02-17T19:08:21.255Z",
+    "requestId": "af197805477d",
     "commitMessage": "deploy(480af37fe3bf4e4a): CareCredit",
     "deployRecordId": ""
   }
