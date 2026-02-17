@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "36ab0a937fe44fc3",
+  "brand": "Bear Loans Bridge",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T17:46:39.381Z",
+    "requestId": "7eb8849ccb6f",
+    "commitMessage": "deploy(36ab0a937fe44fc3): Bear Loans Bridge",
+    "deployRecordId": ""
+  }
+}
