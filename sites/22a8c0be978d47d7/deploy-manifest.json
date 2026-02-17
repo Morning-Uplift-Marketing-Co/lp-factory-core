@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "22a8c0be978d47d7",
+  "brand": "loanbears",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T20:50:04.839Z",
+    "requestId": "af2b9800bb0a",
+    "commitMessage": "deploy(22a8c0be978d47d7): loanbears",
+    "deployRecordId": ""
+  }
+}
