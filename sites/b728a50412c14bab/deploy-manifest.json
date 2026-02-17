@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "b728a50412c14bab",
+  "brand": "Elastic Credits",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T18:57:17.676Z",
+    "requestId": "9524b742e620",
+    "commitMessage": "deploy(b728a50412c14bab): Elastic Credits",
+    "deployRecordId": ""
+  }
+}
