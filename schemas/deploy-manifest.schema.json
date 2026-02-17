@@ -130,8 +130,7 @@
           "type": "string"
         },
         "requestedAt": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "requestId": {
           "type": "string"
