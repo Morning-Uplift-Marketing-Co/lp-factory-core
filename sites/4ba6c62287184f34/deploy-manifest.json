@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "4ba6c62287184f34",
+  "brand": "TestSpeed",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T17:35:13.144Z",
+    "requestId": "3e07843da79e",
+    "commitMessage": "deploy(4ba6c62287184f34): TestSpeed",
+    "deployRecordId": ""
+  }
+}
