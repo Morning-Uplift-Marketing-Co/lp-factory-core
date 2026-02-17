@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "ffb62b27185e4716",
+  "brand": "plaingreen",
+  "templateId": "astrodeck-loan",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T17:31:08.109Z",
+    "requestId": "b1c7cd7b2411",
+    "commitMessage": "deploy(ffb62b27185e4716): plaingreen",
+    "deployRecordId": ""
+  }
+}
