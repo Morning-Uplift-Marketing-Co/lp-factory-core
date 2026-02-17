@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "ef2db832b61444f9",
+  "brand": "Jora Credit",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T17:32:57.275Z",
+    "requestId": "0b43a1dffbcc",
+    "commitMessage": "deploy(ef2db832b61444f9): Jora Credit",
+    "deployRecordId": ""
+  }
+}
