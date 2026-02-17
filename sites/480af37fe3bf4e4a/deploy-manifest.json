@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "siteId": "480af37fe3bf4e4a",
+  "brand": "CareCredit",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "cloudflare-pages",
+      "projectName": "site-480af37fe3bf4e4a"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T17:50:55.876Z",
+    "requestId": "488d2aaebf6a",
+    "commitMessage": "deploy(480af37fe3bf4e4a): CareCredit",
+    "deployRecordId": ""
+  }
+}
