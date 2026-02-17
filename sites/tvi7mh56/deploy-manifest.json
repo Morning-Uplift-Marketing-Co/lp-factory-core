@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "tvi7mh56",
+  "brand": "Bear Loans Pro",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-17T23:54:09.679Z",
+    "requestId": "8e6c9a40e439",
+    "commitMessage": "deploy(tvi7mh56): Bear Loans Pro",
+    "deployRecordId": ""
+  }
+}
