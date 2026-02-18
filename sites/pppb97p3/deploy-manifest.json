@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "pppb97p3",
+  "brand": "Test",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-18T00:26:17.508Z",
+    "requestId": "6aedfab0d2b3",
+    "commitMessage": "deploy(pppb97p3): Test",
+    "deployRecordId": ""
+  }
+}
