@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "d2853393c3ea4a1a",
+  "brand": "plaingreenloans2026",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-18T10:22:44.787Z",
+    "requestId": "29ef46c7f986",
+    "commitMessage": "deploy(d2853393c3ea4a1a): plaingreenloans2026",
+    "deployRecordId": ""
+  }
+}
