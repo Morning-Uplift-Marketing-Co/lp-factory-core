@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "5501ea0f2445449b",
+  "brand": "Plain Green Loans",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-18T01:43:40.577Z",
+    "requestId": "53f77d70dddb",
+    "commitMessage": "deploy(5501ea0f2445449b): Plain Green Loans",
+    "deployRecordId": ""
+  }
+}
