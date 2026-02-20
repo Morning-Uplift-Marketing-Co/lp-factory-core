@@ -86,7 +86,10 @@
       "properties": {
         "entry": {
           "type": "string",
-          "const": "index.html"
+          "enum": [
+            "index.html",
+            "astro"
+          ]
         },
         "extraFiles": {
           "type": "array",
