@@ -120,7 +120,7 @@ jobs:
             NETLIFY_SITE_ID=$(jq -r '.build.netlifyTarget // empty' "$M" | head -n1 || true)
           fi
           if [ -z "$NETLIFY_SITE_ID" ]; then
-            NETLIFY_SITE_ID="${{ vars.NETLIFY_DEFAULT_SITE_ID }}"
+            NETLIFY_SITE_ID="${{ vars.NETLIFY_DEFAULT_SITE_ID }}${{ secrets.NETLIFY_DEFAULT_SITE_ID }}"
           fi
           echo "netlify_site_id=$NETLIFY_SITE_ID" >> "$GITHUB_OUTPUT"
 
