@@ -4,8 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       domain:
+        description: "Domain name (must match CF Pages project)"
         required: true
       template:
+        description: "Template folder inside src/templates"
         required: true
 
 jobs:
@@ -13,28 +15,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm ci
-        working-directory: apps/lander
+      - name: Install Dependencies
+        working-directory: ./apps/lander
+        run: npm install
 
       - name: Build Domain
+        working-directory: ./apps/lander
         run: |
-          DOMAIN=${{ github.event.inputs.domain }} \
-          TEMPLATE=${{ github.event.inputs.template }} \
+          export DOMAIN="${{ github.event.inputs.domain }}"
+          export TEMPLATE="${{ github.event.inputs.template }}"
           npm run build:domain
-        working-directory: apps/lander
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: >
-            pages deploy
-            apps/lander/dist-${{ github.event.inputs.domain }}
+        working-directory: ./apps/lander
+        run: |
+          npx wrangler pages deploy \
+            dist-${{ github.event.inputs.domain }} \
             --project-name=${{ github.event.inputs.domain }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
