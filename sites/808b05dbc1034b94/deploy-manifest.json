@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "siteId": "808b05dbc1034b94",
+  "brand": "scratchpetusa",
+  "templateId": "pdl-loans-v3",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "astro",
+    "extraFiles": [
+      "package.json",
+      "astro.config.mjs",
+      "src/pages/index.astro",
+      "README.md",
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-22T00:27:13.221Z",
+    "requestId": "63155a4316e7",
+    "commitMessage": "deploy(808b05dbc1034b94): scratchpetusa",
+    "deployRecordId": "71ad35157413"
+  }
+}
