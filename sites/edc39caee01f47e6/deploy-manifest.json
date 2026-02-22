@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "edc39caee01f47e6",
+  "brand": "elasticredits",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-22T14:55:40.154Z",
+    "requestId": "8bcdaed61ab7",
+    "commitMessage": "deploy(edc39caee01f47e6): elasticredits",
+    "deployRecordId": "bd659a18c180"
+  }
+}
