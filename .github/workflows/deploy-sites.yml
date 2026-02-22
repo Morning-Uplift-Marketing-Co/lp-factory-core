@@ -111,7 +111,42 @@ jobs:
         run: |
           set -euo pipefail
           M="sites/${{ matrix.site_id }}/deploy-manifest.json"
-          echo "providers=$(jq -c '[.targets[].provider]' "$M")" >> "$GITHUB_OUTPUT"
+          PROVIDERS=$(jq -c '[.targets[].provider]' "$M")
+          echo "providers=$PROVIDERS" >> "$GITHUB_OUTPUT"
+
+          # Resolve netlify site ID: from manifest or fallback to repo var
+          NETLIFY_SITE_ID=$(jq -r '.targets[] | select(.provider=="netlify") | .siteId // empty' "$M" | head -n1 || true)
+          if [ -z "$NETLIFY_SITE_ID" ]; then
+            NETLIFY_SITE_ID=$(jq -r '.build.netlifyTarget // empty' "$M" | head -n1 || true)
+          fi
+          if [ -z "$NETLIFY_SITE_ID" ]; then
+            NETLIFY_SITE_ID="${{ vars.NETLIFY_DEFAULT_SITE_ID }}"
+          fi
+          echo "netlify_site_id=$NETLIFY_SITE_ID" >> "$GITHUB_OUTPUT"
+
+          # Resolve CF Pages project: from manifest or fallback to repo var
+          CF_PROJECT=$(jq -r '.targets[] | select(.provider=="cloudflare-pages") | .projectName // empty' "$M" | head -n1 || true)
+          if [ -z "$CF_PROJECT" ]; then
+            CF_PROJECT=$(jq -r '.build.cfPagesTarget // empty' "$M" | head -n1 || true)
+          fi
+          if [ -z "$CF_PROJECT" ]; then
+            CF_PROJECT="${{ vars.CF_PAGES_DEFAULT_PROJECT }}"
+          fi
+          echo "cf_project=$CF_PROJECT" >> "$GITHUB_OUTPUT"
+
+          # Determine effective deploy mode
+          # If provider is "github-actions" and we have a netlify site ID → use netlify
+          # If provider is "github-actions" and we have a CF project → use cf-pages
+          HAS_NETLIFY=$(echo "$PROVIDERS" | jq 'contains(["netlify"])' || echo "false")
+          HAS_CF=$(echo "$PROVIDERS" | jq 'contains(["cloudflare-pages"])' || echo "false")
+          HAS_GHA=$(echo "$PROVIDERS" | jq 'contains(["github-actions"])' || echo "false")
+
+          if [ "$HAS_GHA" = "true" ] && [ -n "$NETLIFY_SITE_ID" ] && [ "$HAS_NETLIFY" != "true" ]; then
+            echo "providers=$(echo "$PROVIDERS" | jq '. + ["netlify"]')" >> "$GITHUB_OUTPUT"
+          fi
+          if [ "$HAS_GHA" = "true" ] && [ -n "$CF_PROJECT" ] && [ "$HAS_CF" != "true" ] && [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "providers=$(echo "$PROVIDERS" | jq '. + ["cloudflare-pages"]')" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Parse callback metadata
         id: callback
@@ -139,12 +174,11 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         id: cfpages
-        if: contains(steps.targets.outputs.providers, 'cloudflare-pages')
+        if: contains(steps.targets.outputs.providers, 'cloudflare-pages') && steps.targets.outputs.cf_project != ''
         shell: bash
         run: |
           set -euo pipefail
-          M="sites/${{ matrix.site_id }}/deploy-manifest.json"
-          PROJECT=$(jq -r '.targets[] | select(.provider=="cloudflare-pages") | .projectName' "$M" | head -n1)
+          PROJECT="${{ steps.targets.outputs.cf_project }}"
           DEPLOY_OUTPUT=$(wrangler pages deploy "sites/${{ matrix.site_id }}" --project-name "$PROJECT" 2>&1)
           echo "$DEPLOY_OUTPUT"
           DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | grep -Eo 'https://[A-Za-z0-9.-]+\.pages\.dev' | head -n1 || true)
@@ -155,12 +189,11 @@ jobs:
 
       - name: Deploy to Netlify
         id: netlify
-        if: contains(steps.targets.outputs.providers, 'netlify')
+        if: contains(steps.targets.outputs.providers, 'netlify') && steps.targets.outputs.netlify_site_id != ''
         shell: bash
         run: |
           set -euo pipefail
-          M="sites/${{ matrix.site_id }}/deploy-manifest.json"
-          SITE_ID=$(jq -r '.targets[] | select(.provider=="netlify") | .siteId' "$M" | head -n1)
+          SITE_ID="${{ steps.targets.outputs.netlify_site_id }}"
           DEPLOY_OUTPUT=$(netlify deploy --dir="sites/${{ matrix.site_id }}" --site "$SITE_ID" --prod --json)
           echo "$DEPLOY_OUTPUT"
           DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_url // .url // .ssl_url // empty')
