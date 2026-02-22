@@ -2,7 +2,7 @@
   "version": 1,
   "siteId": "d4f5871fb0fa4e81",
   "brand": "LoanBridges",
-  "templateId": "pdl-loans-v3",
+  "templateId": "installment-loans-v1",
   "environment": "production",
   "targets": [
     {
@@ -10,12 +10,8 @@
     }
   ],
   "build": {
-    "entry": "astro",
+    "entry": "index.html",
     "extraFiles": [
-      "package.json",
-      "astro.config.mjs",
-      "src/pages/index.astro",
-      "README.md",
       "apply.html"
     ]
   },
@@ -26,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-20T05:53:12.516Z",
-    "requestId": "bd35b777d35e",
+    "requestedAt": "2026-02-22T06:15:50.680Z",
+    "requestId": "3a50d2dbe879",
     "commitMessage": "deploy(d4f5871fb0fa4e81): LoanBridges",
-    "deployRecordId": "ee45cadaf0e7"
+    "deployRecordId": "72c7dbf9ac65"
   }
 }
