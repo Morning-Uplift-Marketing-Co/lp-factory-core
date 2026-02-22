@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
+  "siteId": "site-mltzlmec",
+  "brand": "TestLoan",
   "templateId": "classic",
   "environment": "production",
   "targets": [
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
-    "deployRecordId": ""
+    "requestedAt": "2026-02-22T05:10:41.325Z",
+    "requestId": "5ac7d0c8c7ef",
+    "commitMessage": "deploy(site-mltzlmec): TestLoan",
+    "deployRecordId": "34dbc2a39b0b"
   }
 }

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
+  "siteId": "ef2db832b61444f9",
+  "brand": "Jora Credit",
   "templateId": "classic",
   "environment": "production",
   "targets": [
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
+    "requestedAt": "2026-02-17T17:53:57.568Z",
+    "requestId": "49eba235d665",
+    "commitMessage": "deploy(ef2db832b61444f9): Jora Credit",
     "deployRecordId": ""
   }
 }

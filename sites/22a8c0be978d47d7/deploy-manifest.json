@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
+  "siteId": "22a8c0be978d47d7",
+  "brand": "loanbears",
   "templateId": "classic",
   "environment": "production",
   "targets": [
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
+    "requestedAt": "2026-02-17T21:03:50.105Z",
+    "requestId": "d562c22134a5",
+    "commitMessage": "deploy(22a8c0be978d47d7): loanbears",
     "deployRecordId": ""
   }
 }

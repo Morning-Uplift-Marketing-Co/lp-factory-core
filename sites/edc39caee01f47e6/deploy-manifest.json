@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
+  "siteId": "edc39caee01f47e6",
+  "brand": "elasticredits",
   "templateId": "classic",
   "environment": "production",
   "targets": [
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
-    "deployRecordId": ""
+    "requestedAt": "2026-02-22T14:55:40.154Z",
+    "requestId": "8bcdaed61ab7",
+    "commitMessage": "deploy(edc39caee01f47e6): elasticredits",
+    "deployRecordId": "bd659a18c180"
   }
 }

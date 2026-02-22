@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
+  "siteId": "5501ea0f2445449b",
+  "brand": "Plain Green Loans",
   "templateId": "classic",
   "environment": "production",
   "targets": [
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
+    "requestedAt": "2026-02-18T01:43:40.577Z",
+    "requestId": "53f77d70dddb",
+    "commitMessage": "deploy(5501ea0f2445449b): Plain Green Loans",
     "deployRecordId": ""
   }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Apply - Loans Bear Now</title>
+<meta name="robots" content="noindex,nofollow">
+<!-- v2|d975c6f3b8f9478e|d975c6f3-mlqyrs30 -->
+<!-- No Google Ads conversion ID configured -->
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:"Inter",system-ui,sans-serif;background:hsl(210,40%,98%);min-height:100vh}</style>
+</head>
+<body>
+<script>(function(){var PX='https://t.'+window.location.hostname+'/e';var sid=crypto.randomUUID();var up=new URLSearchParams(window.location.search);var cid=up.get('clickid')||'';var gid=up.get('gclid')||'';function fire(e,d){var p=new URLSearchParams({e:e,sid:sid,cid:cid,gid:gid,ts:Date.now(),url:window.location.pathname,ref:document.referrer});if(d)for(var k in d)p.set(k,d[k]);navigator.sendBeacon(PX,p);}window.__pixel=fire;fire('pv',{ua:navigator.userAgent,sw:screen.width,sh:screen.height});})();</script>
+<script type="text/javascript">
+var clickid = new URLSearchParams(window.location.search).get('clickid') || '';
+
+var _lg_form_init_ = {
+    aid: "14881",
+    template: "fresh",
+    click_id: clickid,
+
+    onFormLoad: function() {
+        // FORM_START: LeadsGate form has loaded and is visible
+        // Fire gtag conversion (Secondary — trains AI on intent)
+        gtag('event', 'conversion', {
+            send_to: 'AW-{CONVERSION_ID}/{FORM_START_LABEL}'
+        });
+        // Fire custom pixel
+        window.__pixel('fl');
+    },
+
+    onStepChange: function(step) {
+        // User progressed to next form step
+        // Custom pixel only — NOT sent to Google Ads
+        // Used for internal funnel analysis
+        window.__pixel('step', { step: step });
+    },
+
+    onSubmit: function() {
+        // FORM_SUBMIT: User clicked submit button
+        // Fire gtag conversion (Primary — AI optimizes bids for this)
+        gtag('event', 'conversion', {
+            send_to: 'AW-{CONVERSION_ID}/{FORM_SUBMIT_LABEL}'
+        });
+        // Fire custom pixel
+        window.__pixel('fs', { clickid: clickid });
+    },
+
+    onSuccess: function(response) {
+        // Lead was accepted by the network
+        // Custom pixel only — actual conversion is handled by Voluum s2s
+        window.__pixel('success', {
+            clickid: clickid,
+            lead_id: response?.lead_id || ''
+        });
+        // DO NOT redirect — LeadsGate handles redirect to offer page automatically
+        // (e.g. dollarloancash.com or whatever the network configures)
+    }
+};
+</script>
+<script type="text/javascript" async="true" src="https://apikeep.com/form/applicationInit.js"></script>
+<div id="_lg_form_"></div>
+</body>
+</html>

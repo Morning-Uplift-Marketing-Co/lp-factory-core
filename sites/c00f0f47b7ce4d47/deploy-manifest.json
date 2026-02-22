@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "siteId": "831e336b94964909",
-  "brand": "LoanBridge2026",
-  "templateId": "classic",
+  "siteId": "c00f0f47b7ce4d47",
+  "brand": "ScratchPay",
+  "templateId": "pdl-loans-v3",
   "environment": "production",
   "targets": [
     {
@@ -22,9 +22,9 @@
   },
   "meta": {
     "requestedBy": "unknown",
-    "requestedAt": "2026-02-17T21:41:18.391Z",
-    "requestId": "6f62972e6d12",
-    "commitMessage": "deploy(831e336b94964909): LoanBridge2026",
-    "deployRecordId": ""
+    "requestedAt": "2026-02-22T00:30:19.300Z",
+    "requestId": "7b8c56bcb13b",
+    "commitMessage": "deploy(c00f0f47b7ce4d47): ScratchPay",
+    "deployRecordId": "0e31f3c5da1b"
   }
 }
