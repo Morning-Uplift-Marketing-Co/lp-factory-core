@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "c00f0f47b7ce4d47",
+  "brand": "ScratchPay",
+  "templateId": "pdl-loans-v3",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-22T00:30:19.300Z",
+    "requestId": "7b8c56bcb13b",
+    "commitMessage": "deploy(c00f0f47b7ce4d47): ScratchPay",
+    "deployRecordId": "0e31f3c5da1b"
+  }
+}
