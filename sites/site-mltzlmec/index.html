@@ -1,0 +1,111 @@
+<script>var conversionId='';var formStartLabel='';var formSubmitLabel='';var voluumDomain='';var id='preview';var defaultValue=0;var leadsGateFormId='';</script>
+
+<BaseLayout
+  title={`${siteName} — Installment Loans`}
+  description="Get approved in minutes. Funds as fast as next business day."
+  conversionId={conversionId}
+  voluumDomain={voluumDomain}
+  noindex={true}
+>
+  <script>
+    window.__CONVERSION_ID__=conversionId;window.__FORM_START_LABEL__=formStartLabel;window.__FORM_SUBMIT_LABEL__=formSubmitLabel;
+  </script>
+  <main id="main-content" class="flex flex-col items-center px-4 py-8 sm:py-12">
+
+    <!-- Hero -->
+    <section class="w-full max-w-lg text-center mb-8" aria-labelledby="hero-heading">
+      <h1 id="hero-heading" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 leading-tight" style="text-wrap:balance">
+        Monthly Payments That Work
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600 leading-relaxed" style="text-wrap:pretty">
+        Get approved in minutes. Funds as fast as next business day.
+      </p>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="w-full max-w-md mb-8" aria-label="Trust indicators">
+      <ul class="flex justify-center gap-6 text-center text-sm text-gray-500 list-none p-0 m-0" role="list">
+        <li class="flex flex-col items-center">
+          <svg class="w-6 h-6 mb-1 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          <span>256-bit SSL</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <svg class="w-6 h-6 mb-1 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span>2-Min Process</span>
+        </li>
+        <li class="flex flex-col items-center">
+          <svg class="w-6 h-6 mb-1 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span>No Credit Impact</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Form Card -->
+    <section class="w-full max-w-md bg-white rounded-xl shadow-lg border border-gray-100 p-6 sm:p-8 mb-8" aria-labelledby="form-heading" role="form">
+      <h2 id="form-heading" class="sr-only">Loan Application Form</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-sm font-bold" aria-hidden="true">1</span>
+            <span class="text-sm font-semibold text-gray-700">Choose your amount</span>
+          </div>
+          <AmountSlider />
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-sm font-bold" aria-hidden="true">2</span>
+            <span class="text-sm font-semibold text-gray-700">Enter your ZIP code</span>
+          </div>
+          <ZipInput />
+        </div>
+        <div class="pt-2">
+          <CTAButton leadsGateFormId={aid} />
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-gray-400 text-center">
+        By clicking "Apply Now" you agree to our
+        <a href="/terms" class="underline hover:text-gray-600 focus-visible:text-gray-600">Terms</a> and
+        <a href="/privacy" class="underline hover:text-gray-600 focus-visible:text-gray-600">Privacy Policy</a>.
+        Checking rates won't affect your credit score.
+      </p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="w-full max-w-lg mb-8" aria-labelledby="how-it-works-heading">
+      <h2 id="how-it-works-heading" class="text-xl font-bold text-center text-gray-900 mb-6">How It Works</h2>
+      <ol class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center list-none p-0 m-0" role="list">
+        <li class="p-4">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
+            <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 mb-1">Fill Out Form</h3>
+          <p class="text-xs text-gray-500">Answer a few quick questions about your loan needs.</p>
+        </li>
+        <li class="p-4">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
+            <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 mb-1">Get Matched</h3>
+          <p class="text-xs text-gray-500">We connect you with lenders competing for your business.</p>
+        </li>
+        <li class="p-4">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
+            <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" loading="lazy"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 mb-1">Choose Your Offer</h3>
+          <p class="text-xs text-gray-500">Compare rates and terms, then pick the best deal for you.</p>
+        </li>
+      </ol>
+    </section>
+
+    <ComplianceBlock companyName={companyName} />
+  </main>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (typeof window.initTracking === 'function') window.initTracking();
+      }, 2000);
+    });
+  </script>
+</BaseLayout>
