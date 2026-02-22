@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "siteId": "site-mltzlmec",
+  "brand": "TestLoan",
+  "templateId": "classic",
+  "environment": "production",
+  "targets": [
+    {
+      "provider": "github-actions"
+    }
+  ],
+  "build": {
+    "entry": "index.html",
+    "extraFiles": [
+      "apply.html"
+    ]
+  },
+  "tracking": {
+    "googleAdsId": "",
+    "pixelEndpoint": "",
+    "voluumDomain": ""
+  },
+  "meta": {
+    "requestedBy": "unknown",
+    "requestedAt": "2026-02-22T05:10:41.325Z",
+    "requestId": "5ac7d0c8c7ef",
+    "commitMessage": "deploy(site-mltzlmec): TestLoan",
+    "deployRecordId": "34dbc2a39b0b"
+  }
+}
